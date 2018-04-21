@@ -5,6 +5,8 @@ use zhidan;
 # create table restaurant
 CREATE TABLE IF NOT EXISTS `restaurant` (
     `restaurant_id` INT UNSIGNED AUTO_INCREMENT,
+    `manager_number` VARCHAR(16) NOT NULL,
+    `manager_password` CHAR(32) NOT NULL,
     `restaurant_name` VARCHAR(64) NOT NULL,
     `description` VARCHAR(256) DEFAULT '',
     `image_id` VARCHAR(256) DEFAULT '',
@@ -12,16 +14,6 @@ CREATE TABLE IF NOT EXISTS `restaurant` (
     PRIMARY KEY(`restaurant_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 DESC `restaurant`;
-
-# create table manager
-CREATE TABLE IF NOT EXISTS `manager` (
-    `restaurant_id` INT UNSIGNED,
-    `manager_number` VARCHAR(16) NOT NULL,
-    `manager_password` CHAR(32) NOT NULL,
-    PRIMARY KEY(`manager_number`),
-    CONSTRAINT `manager_fk1` FOREIGN KEY(`restaurant_id`) REFERENCES `restaurant` (`restaurant_id`) ON DELETE CASCADE ON UPDATE CASCADE
-)ENGINE=InnoDB DEFAULT CHARSET=utf8;
-DESC `manager`;
 
 # create table disk
 CREATE TABLE IF NOT EXISTS `disk` (
