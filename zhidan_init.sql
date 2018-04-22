@@ -11,7 +11,8 @@ CREATE TABLE IF NOT EXISTS `restaurant` (
     `description` VARCHAR(256) DEFAULT '',
     `image_id` VARCHAR(256) DEFAULT '',
     `restaurant_number` VARCHAR(16) DEFAULT '',
-    PRIMARY KEY(`restaurant_id`)
+    PRIMARY KEY(`restaurant_id`),
+    UNIQUE KEY(`manager_number`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 DESC `restaurant`;
 
