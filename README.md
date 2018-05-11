@@ -2,7 +2,7 @@
 Database initial script backup.
 
 ## Design
-[Mysql Design Diagram](https://github.com/Zhidan-System/Dashboard/blob/master/assets/DB/ER-MySQL/ER-MySQL.png)
+[Mysql Design Diagram](https://github.com/Zhidan-System/Dashboard/blob/master/assets/UML/ER.png)
 
 ## Usage
 - login your mysql server.
