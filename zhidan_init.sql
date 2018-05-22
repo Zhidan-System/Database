@@ -95,7 +95,7 @@ ENGINE = InnoDB;
 -- Table `zhidan`.`customer`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `zhidan`.`customer` (
-  `customer_id` VARCHAR(256) NOT NULL,
+  `customer_id` VARCHAR(64) NOT NULL,
   `nickname` VARCHAR(64) NOT NULL,
   PRIMARY KEY (`customer_id`))
 ENGINE = InnoDB;
@@ -106,7 +106,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `zhidan`.`order` (
   `order_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
-  `customer_id` VARCHAR(256) NOT NULL,
+  `customer_id` VARCHAR(64) NOT NULL,
   `restaurant_id` INT UNSIGNED NOT NULL,
   `desk_id` INT UNSIGNED NOT NULL,
   `order_date` TIMESTAMP NOT NULL DEFAULT NOW(),
@@ -171,7 +171,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `zhidan`.`comment` (
   `comment_id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `dish_id` INT UNSIGNED NOT NULL,
-  `customer_id` VARCHAR(256) NOT NULL,
+  `customer_id` VARCHAR(64) NOT NULL,
   `description` VARCHAR(256) NULL,
   `level` VARCHAR(8) NULL,
   PRIMARY KEY (`comment_id`),
